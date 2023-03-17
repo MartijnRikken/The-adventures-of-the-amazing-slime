@@ -2,16 +2,13 @@ package com.github.hanyaeger.tutorial;
 
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.YaegerGame;
-import com.github.hanyaeger.tutorial.scenes.GameLevel;
-import com.github.hanyaeger.tutorial.scenes.GameOver;
-import com.github.hanyaeger.tutorial.scenes.TitleScene;
-import javafx.scene.Scene;
+
 
 public class Waterworld extends YaegerGame {
 
     @Override
     public void setupGame() {
-        setGameTitle("Waterworld");
+        setGameTitle("The adventures of the amazing Slime");
         setSize(new Size(1600, 900));
     }
 
@@ -19,9 +16,7 @@ public class Waterworld extends YaegerGame {
 
     @Override
     public void setupScenes(){
-        addScene(0, new TitleScene(this));
-        addScene(1, new GameLevel(this));
-        addScene(2, new GameOver(this));
+
     }
 
     public static void main(String[] args){
