@@ -34,5 +34,6 @@ public class GameLevel extends DynamicScene {
         addEntity(henny);
         addEntity(HP);
         //addEntity(shark);
+        // hoi anne
     }
 }
