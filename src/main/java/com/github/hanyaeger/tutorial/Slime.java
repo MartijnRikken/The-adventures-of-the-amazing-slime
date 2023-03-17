@@ -3,9 +3,8 @@ package com.github.hanyaeger.tutorial;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.YaegerGame;
 import com.github.hanyaeger.tutorial.scenes.TitleScene;
-import javafx.scene.Scene;
 
-public class Waterworld extends YaegerGame {
+public class Slime extends YaegerGame {
 
     @Override
     public void setupGame() {
