@@ -1,4 +1,15 @@
 package com.github.hanyaeger.tutorial.scenes;
 
-public class AudioScene {
+import com.github.hanyaeger.api.scenes.StaticScene;
+
+public class AudioScene extends StaticScene {
+    @Override
+    public void setupScene() {
+
+    }
+
+    @Override
+    public void setupEntities() {
+
+    }
 }

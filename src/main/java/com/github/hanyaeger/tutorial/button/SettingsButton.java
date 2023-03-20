@@ -12,12 +12,12 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
-public class StartButton extends TextEntity implements MouseButtonPressedListener, MouseExitListener, MouseEnterListener {
+public class SettingsButton extends TextEntity implements MouseButtonPressedListener, MouseExitListener, MouseEnterListener {
 
     private Slime slime;
 
-    public StartButton(Coordinate2D location, Slime slime){
-        super(location, "Start adventure");
+    public SettingsButton(Coordinate2D location, Slime slime){
+        super(location, "Settings");
         setFill(Color.LIGHTBLUE);
         setFont(Font.font("Roboto", FontWeight.BOLD, 25));
         this.slime = slime;
@@ -26,7 +26,7 @@ public class StartButton extends TextEntity implements MouseButtonPressedListene
 
     @Override
     public void onMouseButtonPressed(MouseButton mouseButton, Coordinate2D coordinate2D) {
-
+        slime.setActiveScene(6);
     }
 
     @Override
