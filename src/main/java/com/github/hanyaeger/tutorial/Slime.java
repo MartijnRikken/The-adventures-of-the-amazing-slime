@@ -17,7 +17,7 @@ public class Slime extends YaegerGame {
     @Override
     public void setupScenes(){
         addScene(0, new TitleScene(this));
-        addScene(1, new AudioScene());
+        addScene(1, new AudioScene(this));
         addScene(2, new GreenLightRedLightScene());
         addScene(3, new VictoryScene());
         addScene(4, new GameOverScene());

@@ -18,12 +18,11 @@ import java.util.Set;
 public class SlimeSprite extends DynamicSpriteEntity implements KeyListener, SceneBorderTouchingWatcher, Newtonian, Collided {
 
     private Slime slime;
-    protected SlimeSprite(Coordinate2D location, Slime slime) {
+    public SlimeSprite(Coordinate2D location, Slime slime) {
 
-        super("sprites/HeroSlime.png", location, new Size(20,40), 1, 2);
+        super("sprites/Hero_slime.png", location, new Size(140,140), 1, 4);
 
-
-        setGravityConstant(0.005);
+        setGravityConstant(0);
         setFrictionConstant(0.04);
     }
 
@@ -31,14 +30,16 @@ public class SlimeSprite extends DynamicSpriteEntity implements KeyListener, Sce
     public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
         if(pressedKeys.contains(KeyCode.LEFT)){
             setMotion(3,270d);
-            setCurrentFrameIndex(2);
+            setCurrentFrameIndex(3);
         } else if(pressedKeys.contains(KeyCode.RIGHT)){
             setMotion(3,90d);
             setCurrentFrameIndex(1);
         } else if(pressedKeys.contains(KeyCode.UP)){
             setMotion(3,180d);
+            setCurrentFrameIndex(4);
         } else if(pressedKeys.contains(KeyCode.DOWN)){
             setMotion(3,0d);
+            setCurrentFrameIndex(2);
         } else if(pressedKeys.isEmpty()){
             setSpeed(0);
         }
