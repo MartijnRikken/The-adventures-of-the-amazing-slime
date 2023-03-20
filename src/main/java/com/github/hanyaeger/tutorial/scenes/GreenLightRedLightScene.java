@@ -1,4 +1,4 @@
 package com.github.hanyaeger.tutorial.scenes;
 
-public class StopGoScene {
+public class GreenLightRedLightScene {
 }
