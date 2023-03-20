@@ -1,4 +1,4 @@
-package com.github.hanyaeger.tutorial.button;
+package com.github.hanyaeger.tutorial.entities.button;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.impl.TextEntity;
@@ -26,7 +26,7 @@ public class StartButton extends TextEntity implements MouseButtonPressedListene
 
     @Override
     public void onMouseButtonPressed(MouseButton mouseButton, Coordinate2D coordinate2D) {
-
+        slime.setActiveScene(1);
     }
 
     @Override

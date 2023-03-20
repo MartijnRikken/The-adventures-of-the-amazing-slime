@@ -1,4 +1,4 @@
-package com.github.hanyaeger.tutorial.button;
+package com.github.hanyaeger.tutorial.entities.button;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.impl.TextEntity;
@@ -12,21 +12,20 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
-public class SettingsButton extends TextEntity implements MouseButtonPressedListener, MouseExitListener, MouseEnterListener {
+public class QuitButton extends TextEntity implements MouseButtonPressedListener, MouseEnterListener, MouseExitListener {
 
     private Slime slime;
 
-    public SettingsButton(Coordinate2D location, Slime slime){
-        super(location, "Settings");
+    public QuitButton(Coordinate2D initialLocation,  Slime slime){
+        super(initialLocation,"Quit");
         setFill(Color.LIGHTBLUE);
         setFont(Font.font("Roboto", FontWeight.BOLD, 25));
         this.slime = slime;
     }
 
-
     @Override
     public void onMouseButtonPressed(MouseButton mouseButton, Coordinate2D coordinate2D) {
-        slime.setActiveScene(6);
+        slime.quit();
     }
 
     @Override
