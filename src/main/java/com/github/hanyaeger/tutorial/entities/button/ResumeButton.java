@@ -6,6 +6,8 @@ import com.github.hanyaeger.api.userinput.MouseButtonPressedListener;
 import com.github.hanyaeger.api.userinput.MouseEnterListener;
 import com.github.hanyaeger.api.userinput.MouseExitListener;
 import com.github.hanyaeger.tutorial.Slime;
+import com.github.hanyaeger.tutorial.entities.ActiveScene;
+import com.github.hanyaeger.tutorial.scenes.MenuScene;
 import javafx.scene.Cursor;
 import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
@@ -15,16 +17,26 @@ import javafx.scene.text.FontWeight;
 public class ResumeButton extends TextEntity implements MouseButtonPressedListener, MouseExitListener, MouseEnterListener {
 
     private Slime slime;
+<<<<<<< Updated upstream
     public ResumeButton(Coordinate2D initialLocation, Slime slime) {
+=======
+    ActiveScene activeScene;
+    public ResumeButton(Coordinate2D initialLocation, Slime slime, ActiveScene activeScene) {
+>>>>>>> Stashed changes
         super(initialLocation, "Continue");
         setFill(Color.LIGHTBLUE);
         setFont(Font.font("Roboto", FontWeight.BOLD, 40));
         this.slime = slime;
+        this.activeScene = activeScene;
     }
 
     @Override
     public void onMouseButtonPressed(MouseButton mouseButton, Coordinate2D coordinate2D) {
+<<<<<<< Updated upstream
         slime.setActiveScene(0);
+=======
+        activeScene.isActiveScene();
+>>>>>>> Stashed changes
     }
 
     @Override
@@ -38,4 +50,9 @@ public class ResumeButton extends TextEntity implements MouseButtonPressedListen
         setFill(Color.LIGHTBLUE);
         setCursor(Cursor.HAND);
     }
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 }
