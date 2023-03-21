@@ -1,17 +1,13 @@
 package com.github.hanyaeger.tutorial.scenes;
 
-import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.impl.TextEntity;
 import com.github.hanyaeger.api.scenes.StaticScene;
 import com.github.hanyaeger.tutorial.Slime;
-<<<<<<< Updated upstream
 import com.github.hanyaeger.tutorial.entities.button.ResumeButton;
 import com.github.hanyaeger.tutorial.entities.button.StartschermButton;
-=======
 import com.github.hanyaeger.tutorial.entities.ActiveScene;
 import com.github.hanyaeger.tutorial.entities.button.*;
->>>>>>> Stashed changes
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -31,17 +27,12 @@ public class MenuScene extends StaticScene {
 
     @Override
     public void setupEntities() {
-<<<<<<< Updated upstream
 
-        var resume = new ResumeButton(new Coordinate2D(850, 210), slime);
-        var home = new StartschermButton(new Coordinate2D(850, 310), slime, 40);
-=======
         var activeScene = new ActiveScene(slime);
         var resume = new ResumeButton(new Coordinate2D(850, 210), slime,  activeScene);
         var home = new StartschermButton(new Coordinate2D(880, 360), slime, 40);
         var help = new HelpButton(new Coordinate2D(890, 500), slime);
         var quit = new QuitButton(new Coordinate2D(890, 650), slime, 40);
->>>>>>> Stashed changes
         var title = new TextEntity(new Coordinate2D(300, 60), "Pause");
 
         title.setFont(Font.font("Roboto", FontWeight.BOLD, 90));
@@ -50,6 +41,8 @@ public class MenuScene extends StaticScene {
         addEntity(home);
         addEntity(resume);
         addEntity(title);
+        addEntity(help);
+        addEntity(quit);
     }
 
 

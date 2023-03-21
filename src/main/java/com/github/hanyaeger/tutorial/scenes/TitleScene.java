@@ -31,7 +31,7 @@ public class TitleScene extends StaticScene {
     public void setupEntities() {
         var startbutton = new StartButton(new Coordinate2D(120, 555), slime);
         var settingsButton = new SettingsButton(new Coordinate2D(155, 645), slime);
-        var quitButton = new QuitButton(new Coordinate2D(175, 735), slime);
+        var quitButton = new QuitButton(new Coordinate2D(175, 735), slime, 25);
 
 
         var title1 = new TextEntity(new Coordinate2D(getWidth() / 2, 160), "The adventures of");

@@ -20,11 +20,7 @@ public class Slime extends YaegerGame {
         addScene(0, new TitleScene(this));
         addScene(1, new AudioScene(this));
         addScene(2, new GreenLightRedLightScene());
-<<<<<<< Updated upstream
-
-=======
         addScene(3, new VictoryScene(this));
->>>>>>> Stashed changes
         addScene(4, new GameOverScene());
         addScene(5, new MenuScene(this));
 

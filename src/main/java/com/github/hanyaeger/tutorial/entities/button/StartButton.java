@@ -16,10 +16,7 @@ import javafx.scene.text.FontWeight;
 public class StartButton extends TextEntity implements MouseButtonPressedListener, MouseExitListener, MouseEnterListener {
 
     private Slime slime;
-<<<<<<< Updated upstream
-=======
     ActiveScene activeScene;
->>>>>>> Stashed changes
 
     public StartButton(Coordinate2D location, Slime slime){
         super(location, "Start adventure");
@@ -31,12 +28,9 @@ public class StartButton extends TextEntity implements MouseButtonPressedListene
 
     @Override
     public void onMouseButtonPressed(MouseButton mouseButton, Coordinate2D coordinate2D) {
-<<<<<<< Updated upstream
         slime.setActiveScene(1);
-=======
         activeScene = new ActiveScene(slime);
         activeScene.isActiveScene();
->>>>>>> Stashed changes
     }
 
     @Override

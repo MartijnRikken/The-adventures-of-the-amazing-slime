@@ -16,10 +16,10 @@ public class QuitButton extends TextEntity implements MouseButtonPressedListener
 
     private Slime slime;
 
-    public QuitButton(Coordinate2D initialLocation,  Slime slime){
+    public QuitButton(Coordinate2D initialLocation,  Slime slime, int fontSize){
         super(initialLocation,"Quit");
         setFill(Color.LIGHTBLUE);
-        setFont(Font.font("Roboto", FontWeight.BOLD, 25));
+        setFont(Font.font("Roboto", FontWeight.BOLD, fontSize));
         this.slime = slime;
     }
 
