@@ -12,13 +12,13 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
-public class StartschermButton extends TextEntity implements MouseButtonPressedListener, MouseExitListener, MouseEnterListener {
+public class ResumeButton extends TextEntity implements MouseButtonPressedListener, MouseExitListener, MouseEnterListener {
 
-private Slime slime;
-    public StartschermButton(Coordinate2D initialLocation, Slime slime, int fontSize) {
-        super(initialLocation, "Home");
+    private Slime slime;
+    public ResumeButton(Coordinate2D initialLocation, Slime slime) {
+        super(initialLocation, "Continue");
         setFill(Color.LIGHTBLUE);
-        setFont(Font.font("Roboto", FontWeight.BOLD, fontSize));
+        setFont(Font.font("Roboto", FontWeight.BOLD, 40));
         this.slime = slime;
     }
 
