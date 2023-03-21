@@ -15,10 +15,10 @@ import javafx.scene.text.FontWeight;
 public class StartschermButton extends TextEntity implements MouseButtonPressedListener, MouseExitListener, MouseEnterListener {
 
 private Slime slime;
-    public StartschermButton(Coordinate2D initialLocation, Slime slime) {
+    public StartschermButton(Coordinate2D initialLocation, Slime slime, int fontSize) {
         super(initialLocation, "Home");
         setFill(Color.LIGHTBLUE);
-        setFont(Font.font("Roboto", FontWeight.BOLD, 25));
+        setFont(Font.font("Roboto", FontWeight.BOLD, fontSize));
         this.slime = slime;
     }
 

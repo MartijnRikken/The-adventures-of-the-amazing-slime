@@ -28,7 +28,7 @@ public class MenuScene extends StaticScene {
     public void setupEntities() {
 
         var resume = new ResumeButton(new Coordinate2D(850, 210), slime);
-        var home = new StartschermButton(new Coordinate2D(850, 310), slime);
+        var home = new StartschermButton(new Coordinate2D(850, 310), slime, 40);
         var title = new TextEntity(new Coordinate2D(300, 60), "Pause");
 
         title.setFont(Font.font("Roboto", FontWeight.BOLD, 90));

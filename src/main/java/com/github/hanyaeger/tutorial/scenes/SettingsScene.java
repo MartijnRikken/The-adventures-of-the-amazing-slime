@@ -26,7 +26,7 @@ public class SettingsScene extends StaticScene {
 
     @Override
     public void setupEntities() {
-        var home = new StartschermButton(new Coordinate2D(20, 20), slime);
+        var home = new StartschermButton(new Coordinate2D(20, 20), slime, 25);
 
         var title = new TextEntity(new Coordinate2D(getWidth() / 2, 170), "Settings");
         var pijltjesUitleg = new TextEntity(new Coordinate2D(300, 470), "Use the arrow keys to move the Amazing slime");
