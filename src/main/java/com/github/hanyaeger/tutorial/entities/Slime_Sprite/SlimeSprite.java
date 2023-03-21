@@ -40,6 +40,7 @@ public class SlimeSprite extends DynamicSpriteEntity implements KeyListener, Sce
         } else if(pressedKeys.contains(KeyCode.DOWN)){
             setMotion(3,0d);
             setCurrentFrameIndex(2);
+
         } else if(pressedKeys.isEmpty()){
             setSpeed(0);
         }
