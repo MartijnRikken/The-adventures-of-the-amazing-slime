@@ -14,6 +14,7 @@ import javafx.scene.text.FontWeight;
 public class TitleScene extends StaticScene {
 
     private Slime slime;
+    
 
     public TitleScene(Slime slime){
         this.slime = slime;
