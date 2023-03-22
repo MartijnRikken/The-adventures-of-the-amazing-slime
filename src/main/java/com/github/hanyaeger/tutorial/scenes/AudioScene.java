@@ -5,6 +5,7 @@ import com.github.hanyaeger.api.scenes.DynamicScene;
 import com.github.hanyaeger.tutorial.entities.Slime_Sprite.SlimeSprite;
 import com.github.hanyaeger.tutorial.Slime;
 import com.github.hanyaeger.tutorial.entities.button.PauseButton;
+import com.github.hanyaeger.tutorial.entities.puzzleButton.Figuur;
 
 public class AudioScene extends DynamicScene {
 
@@ -24,11 +25,16 @@ public class AudioScene extends DynamicScene {
 
     @Override
     public void setupEntities() {
+
+        var figuren = new Figuur(new Coordinate2D(140, 165));
+
         var slimeSprite = new SlimeSprite(new Coordinate2D(490, 700), slime);
         var menu = new PauseButton(new Coordinate2D(945, 20), slime);
 
-        addEntity(slimeSprite);
+
         addEntity(menu);
+        addEntity(figuren);
+        addEntity(slimeSprite);
 
     }
 }

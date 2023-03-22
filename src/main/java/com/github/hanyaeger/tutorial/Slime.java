@@ -2,9 +2,14 @@ package com.github.hanyaeger.tutorial;
 
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.YaegerGame;
+import com.github.hanyaeger.api.entities.Collided;
+import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.tutorial.scenes.*;
+import javafx.scene.Node;
 
-public class Slime extends YaegerGame {
+import java.util.Optional;
+
+public class Slime extends YaegerGame implements Collider {
 
     @Override
     public void setupGame() {
@@ -27,6 +32,11 @@ public class Slime extends YaegerGame {
 
     public static void main(String[] args){
         launch(args);
+    }
+
+    @Override
+    public Optional<? extends Node> getNode() {
+        return Optional.empty();
     }
 }
 
