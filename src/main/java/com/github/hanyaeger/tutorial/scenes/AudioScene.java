@@ -6,8 +6,9 @@ import com.github.hanyaeger.tutorial.entities.Slime_Sprite.SlimeSprite;
 import com.github.hanyaeger.tutorial.Slime;
 import com.github.hanyaeger.tutorial.entities.button.PauseButton;
 import com.github.hanyaeger.tutorial.entities.puzzleButton.Figuur;
+import com.github.hanyaeger.tutorial.entities.puzzleButton.Hitbox.MainHitbox;
 
-public class AudioScene extends DynamicScene {
+public class AudioScene extends DynamicScene{
 
     private Slime slime;
 
@@ -27,6 +28,7 @@ public class AudioScene extends DynamicScene {
     public void setupEntities() {
 
         var figuren = new Figuur(new Coordinate2D(140, 165));
+        var hitbox = new MainHitbox(new Coordinate2D(140, 165));
 
         var slimeSprite = new SlimeSprite(new Coordinate2D(490, 700), slime);
         var menu = new PauseButton(new Coordinate2D(945, 20), slime);
@@ -34,6 +36,7 @@ public class AudioScene extends DynamicScene {
 
         addEntity(menu);
         addEntity(figuren);
+        addEntity(hitbox);
         addEntity(slimeSprite);
 
     }

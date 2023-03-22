@@ -10,7 +10,7 @@ public class Hitbox4 extends CircleEntity implements Collided {
     protected Hitbox4(Coordinate2D initialLocation) {
         super(initialLocation);
         setRadius(50);
-        setFill(Color.BLACK);
+        setFill(Color.TRANSPARENT);
     }
 
     @Override

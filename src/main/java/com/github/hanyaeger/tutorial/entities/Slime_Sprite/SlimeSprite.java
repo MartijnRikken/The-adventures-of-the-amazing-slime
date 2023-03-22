@@ -15,7 +15,7 @@ import com.github.hanyaeger.tutorial.Slime;
 import java.util.Random;
 import java.util.Set;
 
-public class SlimeSprite extends DynamicSpriteEntity implements KeyListener, SceneBorderTouchingWatcher, Newtonian, Collided {
+public class SlimeSprite extends DynamicSpriteEntity implements KeyListener, SceneBorderTouchingWatcher, Newtonian, Collider {
 
     private Slime slime;
     public SlimeSprite(Coordinate2D location, Slime slime) {
@@ -47,7 +47,6 @@ public class SlimeSprite extends DynamicSpriteEntity implements KeyListener, Sce
 
     }
 
-
     @Override
     public void notifyBoundaryTouching(SceneBorder sceneBorder) {
         setSpeed(0);
@@ -68,11 +67,4 @@ public class SlimeSprite extends DynamicSpriteEntity implements KeyListener, Sce
                 break;
         }
     }
-
-    @Override
-    public void onCollision(Collider collider) {
-        setAnchorLocation(new Coordinate2D(0,0));
-
-    }
-
 }

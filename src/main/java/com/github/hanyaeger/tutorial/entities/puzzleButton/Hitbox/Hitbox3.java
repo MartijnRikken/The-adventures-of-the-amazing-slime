@@ -7,12 +7,11 @@ import com.github.hanyaeger.api.entities.impl.CircleEntity;
 import com.github.hanyaeger.api.entities.impl.RectangleEntity;
 import javafx.scene.paint.Color;
 
-public class Hitbox3 extends RectangleEntity implements Collided {
+public class Hitbox3 extends CircleEntity implements Collided {
     protected Hitbox3(Coordinate2D initialLocation) {
         super(initialLocation);
-        setWidth(60);
-        setHeight(2);
-        setFill(Color.BLACK);
+        setRadius(50);
+        setFill(Color.TRANSPARENT);
     }
 
     @Override

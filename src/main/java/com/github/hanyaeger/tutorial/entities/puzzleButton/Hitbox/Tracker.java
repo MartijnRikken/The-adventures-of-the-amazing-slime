@@ -7,6 +7,6 @@ public class Tracker {
     boolean hitbox3 = false;
     boolean hitbox4 = false;
     boolean hitbox5 = false;
-    boolean hitbox6 = false;
+    boolean hitboxRust = false;
 
 }

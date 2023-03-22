@@ -10,9 +10,9 @@ import javafx.scene.paint.Color;
 public class Hitbox2 extends RectangleEntity implements Collided {
     protected Hitbox2(Coordinate2D initialLocation) {
         super(initialLocation);
-        setWidth(60);
-        setHeight(2);
-        setFill(Color.BLACK);
+        setWidth(80);
+        setHeight(80);
+        setFill(Color.TRANSPARENT);
     }
 
     @Override

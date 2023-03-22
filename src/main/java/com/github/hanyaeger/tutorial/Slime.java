@@ -9,7 +9,7 @@ import javafx.scene.Node;
 
 import java.util.Optional;
 
-public class Slime extends YaegerGame implements Collider {
+public class Slime extends YaegerGame   {
 
     @Override
     public void setupGame() {
@@ -34,9 +34,5 @@ public class Slime extends YaegerGame implements Collider {
         launch(args);
     }
 
-    @Override
-    public Optional<? extends Node> getNode() {
-        return Optional.empty();
-    }
 }
 
