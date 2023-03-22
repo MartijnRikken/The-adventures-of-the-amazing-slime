@@ -4,10 +4,15 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.impl.CircleEntity;
+import com.github.hanyaeger.api.entities.impl.RectangleEntity;
+import javafx.scene.paint.Color;
 
-public class hitbox4 extends CircleEntity implements Collided {
-    protected hitbox4(Coordinate2D initialLocation) {
+public class Hitbox2 extends RectangleEntity implements Collided {
+    protected Hitbox2(Coordinate2D initialLocation) {
         super(initialLocation);
+        setWidth(60);
+        setHeight(2);
+        setFill(Color.BLACK);
     }
 
     @Override

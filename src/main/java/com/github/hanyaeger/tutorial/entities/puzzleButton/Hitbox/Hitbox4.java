@@ -4,10 +4,13 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.impl.CircleEntity;
+import javafx.scene.paint.Color;
 
-public class hitbox1 extends CircleEntity implements Collided {
-    protected hitbox1(Coordinate2D initialLocation) {
+public class Hitbox4 extends CircleEntity implements Collided {
+    protected Hitbox4(Coordinate2D initialLocation) {
         super(initialLocation);
+        setRadius(50);
+        setFill(Color.BLACK);
     }
 
     @Override
