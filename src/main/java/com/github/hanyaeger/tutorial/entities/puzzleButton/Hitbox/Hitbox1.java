@@ -10,15 +10,16 @@ import javafx.scene.paint.Color;
 public class Hitbox1 extends RectangleEntity implements Collided {
 
     Tracker tracker;
-    protected Hitbox1(Coordinate2D initialLocation) {
+    protected Hitbox1(Coordinate2D initialLocation, Tracker tracker) {
         super(initialLocation);
         setWidth(80);
         setHeight(80);
         setFill(Color.TRANSPARENT);
+        this.tracker = tracker;
     }
 
     @Override
     public void onCollision(Collider collider) {
-
+        tracker.hitbox1 = true;
     }
 }

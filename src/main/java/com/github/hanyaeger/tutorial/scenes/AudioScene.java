@@ -28,16 +28,14 @@ public class AudioScene extends DynamicScene{
     public void setupEntities() {
 
         var figuren = new Figuur(new Coordinate2D(140, 165));
-        var hitbox = new MainHitbox(new Coordinate2D(140, 165));
+        var hitbox = new MainHitbox(new Coordinate2D(140, 165), slime);
 
-        var slimeSprite = new SlimeSprite(new Coordinate2D(490, 700), slime);
         var menu = new PauseButton(new Coordinate2D(945, 20), slime);
 
 
         addEntity(menu);
         addEntity(figuren);
         addEntity(hitbox);
-        addEntity(slimeSprite);
 
     }
 }
