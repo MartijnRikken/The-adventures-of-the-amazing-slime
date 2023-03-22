@@ -10,6 +10,7 @@ public class AudioScene extends DynamicScene {
 
     private Slime slime;
 
+
     public AudioScene(Slime slime){
         this.slime = slime;
 

@@ -1,13 +1,11 @@
 package com.github.hanyaeger.tutorial.entities.puzzleButton;
 
-public class Vierkant extends figuren{
+import com.github.hanyaeger.api.Coordinate2D;
+import javafx.scene.image.Image;
 
-
-    public Vierkant(int x, int y) {
-        super(x, y);
-    }
-
-    public void Tekenfiguur(){
+public class Vierkant  implements Figuur{
+    @Override
+    public void teken(Coordinate2D location, int row, int column) {
 
     }
 }

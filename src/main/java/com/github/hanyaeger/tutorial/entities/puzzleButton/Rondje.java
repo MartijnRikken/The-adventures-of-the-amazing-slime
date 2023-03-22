@@ -1,11 +1,10 @@
 package com.github.hanyaeger.tutorial.entities.puzzleButton;
 
-public class Rondje extends figuren{
-    public Rondje(int x, int y) {
-        super(x, y);
-    }
+import com.github.hanyaeger.api.Coordinate2D;
 
-    public void Tekenfiguur(){
+public class Rondje implements Figuur{
+    @Override
+    public void teken(Coordinate2D location, int row, int column) {
 
     }
 }
