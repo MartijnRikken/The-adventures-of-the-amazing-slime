@@ -6,14 +6,15 @@ public class ActiveScene {
 
     Slime slime;
 
+    public int scene;
     public ActiveScene( Slime slime){
 
         this.slime = slime;
     }
 
-    public void isActiveScene(int scene){
+    public void isActiveScene(){
 
-        if (scene == 1){
+        if (scene == 1){// hey anne
             slime.setActiveScene(1);
         }
         else if(scene == 2){
