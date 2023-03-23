@@ -4,6 +4,7 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.impl.RectangleEntity;
+import com.github.hanyaeger.api.media.SoundClip;
 import com.github.hanyaeger.tutorial.entities.Slime_Sprite.SlimeSprite;
 import javafx.scene.paint.Color;
 
@@ -27,6 +28,8 @@ public class HitboxRust extends RectangleEntity implements Collided {
         tracker.hitbox3 = false;
         tracker.hitbox4 = false;
         tracker.hitbox5 = false;
+        var popSound = new SoundClip("audio/incorrect.mp3");
+        popSound.play();
 
         slime.setAnchorLocation(new Coordinate2D(320, 500));
     }

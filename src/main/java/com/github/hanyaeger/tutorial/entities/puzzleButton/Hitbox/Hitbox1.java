@@ -5,6 +5,7 @@ import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.impl.CircleEntity;
 import com.github.hanyaeger.api.entities.impl.RectangleEntity;
+import com.github.hanyaeger.api.media.SoundClip;
 import javafx.scene.paint.Color;
 
 public class Hitbox1 extends RectangleEntity implements Collided {
@@ -20,6 +21,12 @@ public class Hitbox1 extends RectangleEntity implements Collided {
 
     @Override
     public void onCollision(Collider collider) {
-        tracker.hitbox1 = true;
+
+        if (tracker.hitbox1 == false){
+            tracker.hitbox1 = true;
+            var popSound = new SoundClip("audio/correct.mp3");
+            popSound.play();
+        }
+
     }
 }

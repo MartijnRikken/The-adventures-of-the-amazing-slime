@@ -28,7 +28,7 @@ public class AudioScene extends DynamicScene{
     public void setupEntities() {
 
         var figuren = new Figuur(new Coordinate2D(140, 165));
-        var hitbox = new MainHitbox(new Coordinate2D(140, 165), slime);
+        var hitbox = new MainHitbox(new Coordinate2D(0, 0), slime);
 
         var menu = new PauseButton(new Coordinate2D(945, 20), slime);
 

@@ -18,12 +18,12 @@ public class MainHitbox extends DynamicCompositeEntity {
 
         var slimeSprite = new SlimeSprite(new Coordinate2D(320, 500), slime);
         var tracker = new Tracker(false, false, false, false, false);
-        var hitbox1 = new Hitbox1(new Coordinate2D(10,10), tracker);
-        var hitbox2 = new Hitbox2(new Coordinate2D(730,10), tracker, slimeSprite);
-        var hitbox3 = new Hitbox3(new Coordinate2D(0,300), tracker, slimeSprite);
-        var hitbox4 = new Hitbox4(new Coordinate2D(720,300), tracker, slimeSprite);
-        var hitbox5 = new Hitbox5(new Coordinate2D(380,0), tracker, slimeSprite);
-        var hitboxRust = new HitboxRust(new Coordinate2D(390,310), tracker, slimeSprite);
+        var hitbox1 = new Hitbox1(new Coordinate2D(150,175), tracker);
+        var hitbox2 = new Hitbox2(new Coordinate2D(870,175), tracker, slimeSprite);
+        var hitbox3 = new Hitbox3(new Coordinate2D(150,465), tracker, slimeSprite);
+        var hitbox4 = new Hitbox4(new Coordinate2D(870,465), tracker, slimeSprite);
+        var hitbox5 = new Hitbox5(new Coordinate2D(530,165), tracker, slimeSprite);
+        var hitboxRust = new HitboxRust(new Coordinate2D(530,475), tracker, slimeSprite);
 
         addEntity(hitbox1);
         addEntity(hitbox2);
