@@ -3,6 +3,8 @@ package com.github.hanyaeger.tutorial.scenes;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.scenes.DynamicScene;
 import com.github.hanyaeger.tutorial.Slime;
+import com.github.hanyaeger.tutorial.entities.Slime_Sprite.Health;
+import com.github.hanyaeger.tutorial.entities.Slime_Sprite.SlimeSprite;
 import com.github.hanyaeger.tutorial.entities.TrafficLight.HitboxGR;
 import com.github.hanyaeger.tutorial.entities.TrafficLight.Licht;
 
@@ -28,23 +30,27 @@ public class GreenLightRedLightScene extends DynamicScene {
 
     @Override
     public void setupEntities() {
-        var hitbox = new HitboxGR(new Coordinate2D(150, 0));
+        var SlimeSprite = new SlimeSprite(new Coordinate2D(0, 500), slime);
+        var hp = new Health(new Coordinate2D(10, 10), 3, slime);
+        var hitbox = new HitboxGR(new Coordinate2D(150, 0), hp, SlimeSprite);
 
-        addEntity(hitbox);
         Timer timer = new Timer();
+        addEntity(hp);
+        addEntity(SlimeSprite);
+        hp.setHealthText();
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 if (flicker == true) {
                     trafficlight = new Licht(new Coordinate2D(400, 0), 1);
-
+                    hitbox.remove();
 
                     flicker = false;
 
                 } else {
                     trafficlight = new Licht(new Coordinate2D(400, 0), 2);
-
+                    addEntity(hitbox);
                     flicker = true;
                 }
 
