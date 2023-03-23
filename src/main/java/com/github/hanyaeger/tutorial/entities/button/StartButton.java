@@ -29,8 +29,6 @@ public class StartButton extends TextEntity implements MouseButtonPressedListene
     @Override
     public void onMouseButtonPressed(MouseButton mouseButton, Coordinate2D coordinate2D) {
         slime.setActiveScene(1);
-        activeScene = new ActiveScene(slime);
-        activeScene.isActiveScene();
     }
 
     @Override

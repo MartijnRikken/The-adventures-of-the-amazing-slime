@@ -28,8 +28,7 @@ public class ResumeButton extends TextEntity implements MouseButtonPressedListen
 
     @Override
     public void onMouseButtonPressed(MouseButton mouseButton, Coordinate2D coordinate2D) {
-        slime.setActiveScene(0);
-        activeScene.isActiveScene();
+        slime.setActiveScene(1);
     }
 
     @Override

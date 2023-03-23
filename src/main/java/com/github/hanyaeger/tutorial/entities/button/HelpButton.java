@@ -17,7 +17,7 @@ public class HelpButton extends TextEntity implements MouseButtonPressedListener
     private Slime slime;
 
     public HelpButton(Coordinate2D location, Slime slime){
-        super(location, "Pause");
+        super(location, "Help");
         setFill(Color.LIGHTBLUE);
         setFont(Font.font("Roboto", FontWeight.BOLD, 40));
         this.slime = slime;

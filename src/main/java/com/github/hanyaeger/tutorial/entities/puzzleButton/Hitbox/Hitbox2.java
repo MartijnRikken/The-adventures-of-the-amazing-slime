@@ -5,6 +5,7 @@ import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.impl.RectangleEntity;
 import com.github.hanyaeger.api.media.SoundClip;
+import com.github.hanyaeger.tutorial.entities.Slime_Sprite.Health;
 import com.github.hanyaeger.tutorial.entities.Slime_Sprite.SlimeSprite;
 import javafx.scene.paint.Color;
 
@@ -12,13 +13,15 @@ public class Hitbox2 extends RectangleEntity implements Collided {
 
     SlimeSprite slime;
     Tracker tracker;
-    protected Hitbox2(Coordinate2D initialLocation, Tracker tracker, SlimeSprite slime) {
+    Health hp;
+    protected Hitbox2(Coordinate2D initialLocation, Tracker tracker, SlimeSprite slime, Health hp) {
         super(initialLocation);
         setWidth(80);
         setHeight(80);
         setFill(Color.TRANSPARENT);
         this.tracker = tracker;
         this.slime  = slime;
+        this.hp = hp;
     }
 
     @Override
@@ -37,7 +40,7 @@ public class Hitbox2 extends RectangleEntity implements Collided {
                 tracker.hitbox5 = false;
                 var popSound = new SoundClip("audio/incorrect.mp3");
                 popSound.play();
-
+                hp.setHealthText();
                 slime.setAnchorLocation(new Coordinate2D(320, 500));
             }
         }

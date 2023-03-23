@@ -33,7 +33,7 @@ public class SettingsScene extends StaticScene {
         var map = new TextEntity(new Coordinate2D(115, 555), "Map");
         var mapUitleg = new TextEntity(new Coordinate2D(300, 570), "here you can request help and quit game");
         var hp = new TextEntity(new Coordinate2D(90, 690), "Health");
-        var hpUitleg   = new TextEntity(new Coordinate2D(300, 700), "you lose if your health becomes zero");
+        var hpUitleg   = new TextEntity(new Coordinate2D(300, 700), "you lose if your Health becomes zero");
         title.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         title.setFont(Font.font("Roboto", FontWeight.BOLD, 90));
         pijltjesUitleg.setFont(Font.font("Roboto", FontWeight.BOLD, 25));
