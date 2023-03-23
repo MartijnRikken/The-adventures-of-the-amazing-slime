@@ -34,6 +34,6 @@ public class HitboxRust extends RectangleEntity implements Collided {
         var popSound = new SoundClip("audio/incorrect.mp3");
         popSound.play();
         hp.setHealthText();
-        slime.setAnchorLocation(new Coordinate2D(320, 500));
+        slime.setAnchorLocation(new Coordinate2D(460, 665));
     }
 }

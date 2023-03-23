@@ -20,7 +20,7 @@ public class SlimeSprite extends DynamicSpriteEntity implements KeyListener, Sce
     private Slime slime;
     public SlimeSprite(Coordinate2D location, Slime slime) {
 
-        super("sprites/Hero_slime.png", location, new Size(140,140), 1, 4);
+        super("sprites/Hero_slime.png", location, new Size(100,100), 1, 4);
 
         setGravityConstant(0);
         setFrictionConstant(0.04);
@@ -63,6 +63,7 @@ public class SlimeSprite extends DynamicSpriteEntity implements KeyListener, Sce
                 break;
             case RIGHT:
                 setAnchorLocationX(getSceneWidth() - getWidth() - 1);
+                slime.setActiveScene(3);
             default:
                 break;
         }
