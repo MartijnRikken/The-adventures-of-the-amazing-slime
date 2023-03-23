@@ -5,6 +5,7 @@ import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.impl.CircleEntity;
 import com.github.hanyaeger.api.media.SoundClip;
+import com.github.hanyaeger.tutorial.Slime;
 import com.github.hanyaeger.tutorial.entities.Slime_Sprite.Health;
 import com.github.hanyaeger.tutorial.entities.Slime_Sprite.SlimeSprite;
 import javafx.scene.paint.Color;
@@ -13,13 +14,15 @@ public class Hitbox5 extends CircleEntity implements Collided {
     SlimeSprite slime;
     Tracker tracker;
     Health hp;
-    protected Hitbox5(Coordinate2D initialLocation, Tracker tracker, SlimeSprite slime, Health hp) {
+    Slime slijmpje;
+    protected Hitbox5(Coordinate2D initialLocation, Tracker tracker, SlimeSprite slime, Health hp, Slime slijmpje) {
         super(initialLocation);
         setRadius(50);
         setFill(Color.TRANSPARENT);
         this.tracker = tracker;
         this.slime  = slime;
         this.hp = hp;
+        this.slijmpje = slijmpje;
     }
 
     @Override
@@ -29,6 +32,8 @@ public class Hitbox5 extends CircleEntity implements Collided {
                 tracker.hitbox5 = true;
                 var popSound = new SoundClip("audio/correct.mp3");
                 popSound.play();
+                slijmpje.setActiveScene(2);
+
             } else {
                 tracker.hitbox1 = false;
                 tracker.hitbox2 = false;

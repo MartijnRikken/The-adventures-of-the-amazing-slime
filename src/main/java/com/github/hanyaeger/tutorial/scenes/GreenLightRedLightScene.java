@@ -2,16 +2,20 @@ package com.github.hanyaeger.tutorial.scenes;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.scenes.DynamicScene;
-import com.github.hanyaeger.api.scenes.StaticScene;
 import com.github.hanyaeger.tutorial.Slime;
 import com.github.hanyaeger.tutorial.entities.TrafficLight.Licht;
-import javafx.scene.effect.Light;
+import com.github.hanyaeger.tutorial.Slime;
+import com.github.hanyaeger.tutorial.entities.TrafficLight.HitboxGR;
+import com.github.hanyaeger.tutorial.entities.TrafficLight.Licht;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class GreenLightRedLightScene extends DynamicScene {
 
+    Licht trafficlight;
+
+    boolean flicker = false;
     private Slime slime;
 
     public GreenLightRedLightScene(Slime slime) {
@@ -24,25 +28,33 @@ public class GreenLightRedLightScene extends DynamicScene {
         setBackgroundAudio("audio/Hyrule_castle.mp3");
     }
 
+
     @Override
     public void setupEntities() {
-        boolean flicker = true;
-        var trafficlight = new Licht(new Coordinate2D(0, 0), flicker);
-        addEntity(trafficlight);
+        var hitbox = new HitboxGR(new Coordinate2D(150, 0));
 
+        addEntity(hitbox);
         Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                if(flicker == false) {
-                    flicker = true;
-                }else if(flicker == true){
-                    flicker = false;
-                }
-            }
-        }, 0, 700);
-        }
-    }
+                if (flicker == true) {
+                    trafficlight = new Licht(new Coordinate2D(400, 0), 1);
 
+
+                    flicker = false;
+
+                } else {
+                    trafficlight = new Licht(new Coordinate2D(400, 0), 2);
+
+                    flicker = true;
+                }
+
+                addEntity(trafficlight);
+
+            }
+        }, 0, 3500);
+    }
+}
 
