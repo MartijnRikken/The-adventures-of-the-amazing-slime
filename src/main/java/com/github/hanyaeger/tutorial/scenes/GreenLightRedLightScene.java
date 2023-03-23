@@ -15,17 +15,16 @@ public class GreenLightRedLightScene extends DynamicScene {
         this.slime = slime;
     }
 
-        @Override
-        public void setupScene() {
+    @Override
+    public void setupScene() {
 
-        }
+    }
+
 
         @Override
-        public void setupEntities() {
+        public void setupEntities () {
 
             final int[] test = {1};
-            final int test2 = 2;
-            final int test3 = 1;
 
             Timer timer = new Timer();
 
@@ -59,4 +58,4 @@ public class GreenLightRedLightScene extends DynamicScene {
             //addEntity(trafficlight);
         }
     }
-
+}
