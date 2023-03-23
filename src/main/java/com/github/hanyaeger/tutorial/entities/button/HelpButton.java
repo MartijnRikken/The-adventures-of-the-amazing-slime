@@ -6,6 +6,8 @@ import com.github.hanyaeger.api.userinput.MouseButtonPressedListener;
 import com.github.hanyaeger.api.userinput.MouseEnterListener;
 import com.github.hanyaeger.api.userinput.MouseExitListener;
 import com.github.hanyaeger.tutorial.Slime;
+import com.github.hanyaeger.tutorial.entities.ActiveScene;
+import com.github.hanyaeger.tutorial.entities.HelpText;
 import javafx.scene.Cursor;
 import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
@@ -15,18 +17,22 @@ import javafx.scene.text.FontWeight;
 public class HelpButton extends TextEntity implements MouseButtonPressedListener, MouseExitListener, MouseEnterListener {
 
     private Slime slime;
+    ActiveScene activeScene;
 
-    public HelpButton(Coordinate2D location, Slime slime){
+    public HelpButton(Coordinate2D location, Slime slime, ActiveScene activeScene){
         super(location, "Help");
         setFill(Color.LIGHTBLUE);
         setFont(Font.font("Roboto", FontWeight.BOLD, 40));
         this.slime = slime;
+        this.activeScene = activeScene;
     }
 
 
     @Override
     public void onMouseButtonPressed(MouseButton mouseButton, Coordinate2D coordinate2D) {
-        slime.setActiveScene(5);
+
+
+
     }
 
     @Override

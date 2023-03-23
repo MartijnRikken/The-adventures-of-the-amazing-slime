@@ -25,7 +25,7 @@ public class Health extends TextEntity {
         healthPoints--;
         setText("Health: " + healthPoints);
         if (healthPoints == 0){
-            slime.setActiveScene(3);
+            slime.setActiveScene(4);
         }
     }
 }

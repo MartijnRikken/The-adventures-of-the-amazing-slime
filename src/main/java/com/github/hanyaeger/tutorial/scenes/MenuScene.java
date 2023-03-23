@@ -1,9 +1,11 @@
 package com.github.hanyaeger.tutorial.scenes;
 
 import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.Timer;
 import com.github.hanyaeger.api.entities.impl.TextEntity;
 import com.github.hanyaeger.api.scenes.StaticScene;
 import com.github.hanyaeger.tutorial.Slime;
+import com.github.hanyaeger.tutorial.entities.HelpText;
 import com.github.hanyaeger.tutorial.entities.button.ResumeButton;
 import com.github.hanyaeger.tutorial.entities.button.StartschermButton;
 import com.github.hanyaeger.tutorial.entities.ActiveScene;
@@ -28,12 +30,13 @@ public class MenuScene extends StaticScene {
     @Override
     public void setupEntities() {
 
-        var activeScene = new ActiveScene(slime);
+        var activeScene = new ActiveScene(1);
         var resume = new ResumeButton(new Coordinate2D(850, 210), slime,  activeScene);
         var home = new StartschermButton(new Coordinate2D(880, 360), slime, 40);
-        var help = new HelpButton(new Coordinate2D(890, 500), slime);
+        var help = new HelpButton(new Coordinate2D(890, 500), slime, activeScene);
         var quit = new QuitButton(new Coordinate2D(890, 650), slime, 40);
         var title = new TextEntity(new Coordinate2D(300, 60), "Pause");
+        var helpText = new HelpText(new Coordinate2D(0, 0), activeScene.oldScene);
 
         title.setFont(Font.font("Roboto", FontWeight.BOLD, 90));
         title.setFill(Color.LIGHTBLUE);
@@ -43,6 +46,7 @@ public class MenuScene extends StaticScene {
         addEntity(title);
         addEntity(help);
         addEntity(quit);
+        addEntity(helpText);
     }
 
 
