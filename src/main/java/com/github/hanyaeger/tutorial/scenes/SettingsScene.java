@@ -30,7 +30,7 @@ public class SettingsScene extends StaticScene {
 
         var title = new TextEntity(new Coordinate2D(getWidth() / 2, 170), "Settings");
         var pijltjesUitleg = new TextEntity(new Coordinate2D(300, 470), "Use the arrow keys to move the Amazing slime");
-        var map = new TextEntity(new Coordinate2D(115, 555), "Map");
+        var map = new TextEntity(new Coordinate2D(100, 555), "Pause");
         var mapUitleg = new TextEntity(new Coordinate2D(300, 570), "here you can request help and quit game");
         var hp = new TextEntity(new Coordinate2D(90, 690), "Health");
         var hpUitleg   = new TextEntity(new Coordinate2D(300, 700), "you lose if your Health becomes zero");

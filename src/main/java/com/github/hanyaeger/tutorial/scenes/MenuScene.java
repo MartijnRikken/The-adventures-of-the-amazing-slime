@@ -30,9 +30,8 @@ public class MenuScene extends StaticScene {
     @Override
     public void setupEntities() {
 
-        var resume = new ResumeButton(new Coordinate2D(850, 210), slime,  scherm);
-        var home = new StartschermButton(new Coordinate2D(880, 360), slime, 40);
-        var help = new HelpButton(new Coordinate2D(890, 500), slime, scherm);
+        var resume = new ResumeButton(new Coordinate2D(850, 360), slime, scherm);
+        var home = new StartschermButton(new Coordinate2D(880, 500), slime, 40);
         var quit = new QuitButton(new Coordinate2D(890, 650), slime, 40);
         var title = new TextEntity(new Coordinate2D(300, 60), "Pause");
         var helpText = new HelpText(new Coordinate2D(75, 500), scherm);
@@ -43,12 +42,9 @@ public class MenuScene extends StaticScene {
         addEntity(home);
         addEntity(resume);
         addEntity(title);
-        addEntity(help);
         addEntity(quit);
         addEntity(helpText);
+
     }
-
-
-
 
 }
