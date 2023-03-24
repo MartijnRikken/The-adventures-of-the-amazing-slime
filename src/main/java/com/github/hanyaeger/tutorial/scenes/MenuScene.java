@@ -35,7 +35,7 @@ public class MenuScene extends StaticScene {
         var help = new HelpButton(new Coordinate2D(890, 500), slime, scherm);
         var quit = new QuitButton(new Coordinate2D(890, 650), slime, 40);
         var title = new TextEntity(new Coordinate2D(300, 60), "Pause");
-        var helpText = new HelpText(new Coordinate2D(0, 0), scherm.oldScene);
+        var helpText = new HelpText(new Coordinate2D(75, 500), scherm);
 
         title.setFont(Font.font("Roboto", FontWeight.BOLD, 90));
         title.setFill(Color.LIGHTBLUE);
@@ -45,7 +45,7 @@ public class MenuScene extends StaticScene {
         addEntity(title);
         addEntity(help);
         addEntity(quit);
-        //addEntity(helpText);
+        addEntity(helpText);
     }
 
 
