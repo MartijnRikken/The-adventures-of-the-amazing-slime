@@ -19,13 +19,13 @@ public class MainHitbox extends DynamicCompositeEntity {
     @Override
     protected void setupEntities() {
 
-        var slimeSprite = new SlimeSprite(new Coordinate2D(320, 500), slime);
+        var slimeSprite = new SlimeSprite(new Coordinate2D(460, 665), slime);
         var tracker = new Tracker(false, false, false, false, false);
         var hitbox1 = new Hitbox1(new Coordinate2D(150,175), tracker);
         var hitbox2 = new Hitbox2(new Coordinate2D(870,175), tracker, slimeSprite, hp);
         var hitbox3 = new Hitbox3(new Coordinate2D(150,465), tracker, slimeSprite, hp);
         var hitbox4 = new Hitbox4(new Coordinate2D(870,465), tracker, slimeSprite, hp);
-        var hitbox5 = new Hitbox5(new Coordinate2D(530,165), tracker, slimeSprite, hp);
+        var hitbox5 = new Hitbox5(new Coordinate2D(530,165), tracker, slimeSprite, hp, slime);
         var hitboxRust = new HitboxRust(new Coordinate2D(530,475), tracker, slimeSprite, hp);
 
         addEntity(hitbox1);

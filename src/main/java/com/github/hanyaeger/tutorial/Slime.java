@@ -4,6 +4,7 @@ import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.YaegerGame;
 import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
+import com.github.hanyaeger.tutorial.entities.ActiveScene;
 import com.github.hanyaeger.tutorial.scenes.*;
 import javafx.scene.Node;
 
@@ -21,14 +22,16 @@ public class Slime extends YaegerGame   {
 
     @Override
     public void setupScenes(){
-        addScene(2, new GreenLightRedLightScene(this));
-        addScene(0, new TitleScene(this));
-        addScene(1, new AudioScene(this));
+        var scherm = new ActiveScene();
 
+        addScene(0, new TitleScene(this));
+        addScene(1, new AudioScene(this, scherm));
+        addScene(2, new GreenLightRedLightScene(this, scherm));
         addScene(3, new VictoryScene(this));
         addScene(4, new GameOverScene(this));
-        addScene(5, new MenuScene(this));
+        addScene(5, new MenuScene(this, scherm));
         addScene(6, new SettingsScene(this));
+        addScene(7, new TransitionScene(this));
     }
 
     public static void main(String[] args){
