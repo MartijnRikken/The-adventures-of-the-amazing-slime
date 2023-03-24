@@ -17,7 +17,7 @@ public class Hitbox2 extends RectangleEntity implements Collided {
     protected Hitbox2(Coordinate2D initialLocation, Tracker tracker, SlimeSprite slime, Health hp) {
         super(initialLocation);
         setWidth(80);
-        setHeight(80);
+        setHeight(70);
         setFill(Color.TRANSPARENT);
         this.tracker = tracker;
         this.slime  = slime;

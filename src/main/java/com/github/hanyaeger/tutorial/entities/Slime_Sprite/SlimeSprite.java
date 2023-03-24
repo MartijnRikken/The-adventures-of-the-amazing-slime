@@ -63,7 +63,6 @@ public class SlimeSprite extends DynamicSpriteEntity implements KeyListener, Sce
                 break;
             case RIGHT:
                 setAnchorLocationX(getSceneWidth() - getWidth() - 1);
-                slime.setActiveScene(3);
             default:
                 break;
         }

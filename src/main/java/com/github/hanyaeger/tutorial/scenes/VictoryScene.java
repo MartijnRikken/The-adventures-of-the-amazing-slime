@@ -28,7 +28,7 @@ public class VictoryScene extends StaticScene {
     @Override
     public void setupEntities() {
         var home = new StartschermButton(new Coordinate2D(820, 570), slime, 40);
-        var quitButton = new QuitButton(new Coordinate2D(820, 715), slime, 40);
+        var quitButton = new QuitButton(new Coordinate2D(820, 700), slime, 40);
         var title = new TextEntity(new Coordinate2D(320, 20), "Victory!");
         title.setFont(Font.font("Roboto", FontWeight.BOLD, 90));
         title.setFill(Color.LIGHTBLUE);
