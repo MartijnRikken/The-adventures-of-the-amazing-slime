@@ -4,6 +4,7 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.impl.TextEntity;
 import com.github.hanyaeger.api.scenes.DynamicScene;
 import com.github.hanyaeger.tutorial.Slime;
+import com.github.hanyaeger.tutorial.entities.Transition.HitboxTR;
 import com.github.hanyaeger.tutorial.entities.Transition.Slijmpje;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -26,6 +27,7 @@ public class TransitionScene extends DynamicScene {
     @Override
     public void setupEntities() {
         var slijmpje = new Slijmpje(new Coordinate2D(0, 500), slime);
+        var hitbox = new HitboxTR(new Coordinate2D(1078, 0), slime);
         var gratsText1 = new TextEntity(new Coordinate2D(100, 100), "Congratulations you have found a potion");
         var gratsText2 = new TextEntity(new Coordinate2D(100, 150), "your health has been set to 5");
         gratsText1.setFont(Font.font("Roboto", FontWeight.BOLD, 40));
@@ -33,6 +35,7 @@ public class TransitionScene extends DynamicScene {
         gratsText2.setFont(Font.font("Roboto", FontWeight.BOLD, 40));
         gratsText2.setFill(Color.LIGHTBLUE);
 
+        addEntity(hitbox);
         addEntity(slijmpje);
         addEntity(gratsText1);
         addEntity(gratsText2);

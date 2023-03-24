@@ -24,7 +24,8 @@ public class Slime extends YaegerGame   {
     public void setupScenes(){
         var scherm = new ActiveScene();
 
-        
+
+        addScene(7, new TransitionScene(this));
         addScene(0, new TitleScene(this));
         addScene(1, new AudioScene(this, scherm));
         addScene(2, new GreenLightRedLightScene(this, scherm));
@@ -32,7 +33,6 @@ public class Slime extends YaegerGame   {
         addScene(4, new GameOverScene(this));
         addScene(5, new MenuScene(this, scherm));
         addScene(6, new SettingsScene(this));
-        addScene(7, new TransitionScene(this));
     }
 
     public static void main(String[] args){
