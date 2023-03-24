@@ -24,9 +24,10 @@ public class Slime extends YaegerGame   {
     public void setupScenes(){
         var scherm = new ActiveScene();
 
-        addScene(2, new GreenLightRedLightScene(this, scherm));
+        
         addScene(0, new TitleScene(this));
         addScene(1, new AudioScene(this, scherm));
+        addScene(2, new GreenLightRedLightScene(this, scherm));
         addScene(3, new VictoryScene(this));
         addScene(4, new GameOverScene(this));
         addScene(5, new MenuScene(this, scherm));
