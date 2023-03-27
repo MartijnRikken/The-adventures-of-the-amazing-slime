@@ -9,7 +9,7 @@ import com.github.hanyaeger.tutorial.entities.Slime_Sprite.Health;
 import com.github.hanyaeger.tutorial.entities.Slime_Sprite.SlimeSprite;
 import javafx.scene.paint.Color;
 
-public class Hitbox3 extends CircleEntity implements Collided {
+public class Hitbox3 extends CircleEntity implements hitbox {
     SlimeSprite slime;
     Tracker tracker;
     Health hp;

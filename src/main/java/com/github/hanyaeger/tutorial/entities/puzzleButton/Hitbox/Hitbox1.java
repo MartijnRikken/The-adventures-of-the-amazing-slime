@@ -8,7 +8,7 @@ import com.github.hanyaeger.api.entities.impl.RectangleEntity;
 import com.github.hanyaeger.api.media.SoundClip;
 import javafx.scene.paint.Color;
 
-public class Hitbox1 extends RectangleEntity implements Collided {
+public class Hitbox1 extends RectangleEntity implements hitbox {
 
     Tracker tracker;
     protected Hitbox1(Coordinate2D initialLocation, Tracker tracker) {
